@@ -4,7 +4,7 @@ import 'package:tradeofffinal/screens/login_page.dart';
 import 'package:tradeofffinal/screens/registration_page.dart';
 import 'package:tradeofffinal/screens/welcome_page.dart';
 
-Future<void> main() async {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(MyApp());

@@ -15,100 +15,92 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
-      body: Column(
-        //  crossAxisAlignment: CrossAxisAlignment.center,
-        //  mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Align(
-              //   alignment: Alignment.center,
-              child: Padding(
-            padding: const EdgeInsets.only(left: 0),
-            child: Image.asset(
-              "assets/logo.png",
-              height: 200,
-              width: 200,
-              fit: BoxFit.cover,
-            ),
-          )),
-          const Text(
-            'Trade-Off',
-            style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.w900,
-                color: Colors.blueAccent),
-          ),
-        ],
-      ),
-      bottomNavigationBar: BottomAppBar(
-        elevation: 0.0,
-        child: Padding(
-          padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        backgroundColor: Colors.white,
+        body: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              GestureDetector(onTap: () {
-                onTap:
-                () {
-                  Navigator.pushNamed(context, LoginPage.id);
-                };
-                child:
-                Container(
-                  height: 50,
-                  width: 130,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(40),
-                      border: Border.all(color: Colors.blueAccent),
-                      gradient: LinearGradient(
-                          begin: Alignment.topRight,
-                          end: Alignment.bottomLeft,
-                          colors: [
-                            Theme.of(context).accentColor,
-                            Color(0xff597FDB),
-                          ])),
-                  child: const Center(
-                    child: Text(
-                      'LOGIN',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w900,
-                        color: Colors.white,
-                      ),
+              Align(
+                  alignment: Alignment.center,
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 0),
+                    child: Image.asset(
+                      "assets/logo.png",
+                      height: 200,
+                      width: 200,
+                      fit: BoxFit.cover,
                     ),
-                  ),
-                );
-              }),
-              GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, RegisterPage.id);
-                },
-                child: Container(
-                  height: 45,
-                  width: 130,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(40),
-                      border: Border.all(color: Colors.blueAccent),
-                      gradient: LinearGradient(
+                  )),
+              const Text(
+                'Trade-Off',
+                style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.w900,
+                    color: Colors.blueAccent),
+              ),
+              SizedBox(height: 60.0),
+              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+                Center(
+                  child: Container(
+                    height: 55.0,
+                    width: 130.0,
+                    decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(40),
+                        border: Border.all(color: Colors.white),
+                        gradient: LinearGradient(
                           begin: Alignment.topRight,
                           end: Alignment.bottomLeft,
                           colors: [
                             Theme.of(context).accentColor,
                             Color(0xff597FDB),
-                          ])),
-                  child: const Center(
-                    child: Text(
-                      'REGISTER',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w900,
-                        color: Colors.white,
+                          ],
+                        )),
+                    child: FlatButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (_) => LoginPage()));
+                      },
+                      child: const Text(
+                        'Login',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w900,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ),
                 ),
-              )
-            ],
-          ),
-        ),
-      ),
-    );
+                Container(
+                  height: 55.0,
+                  width: 130.0,
+                  decoration: BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.circular(40),
+                      border: Border.all(color: Colors.white),
+                      gradient: LinearGradient(
+                        begin: Alignment.topRight,
+                        end: Alignment.bottomLeft,
+                        colors: [
+                          Theme.of(context).accentColor,
+                          Color(0xff597FDB),
+                        ],
+                      )),
+                  child: FlatButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (_) => RegisterPage()));
+                    },
+                    child: const Text(
+                      'Register',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w900,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                )
+              ])
+            ]));
   }
 }

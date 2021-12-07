@@ -7,8 +7,6 @@ import 'package:tradeofffinal/screens/registration_page.dart';
 class LoginPage extends StatefulWidget {
   static String id = 'login_page';
 
-  LoginPage({Key? key}) : super(key: key);
-
   @override
   _LoginPageState createState() => _LoginPageState();
 }
@@ -83,12 +81,12 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(height: size.height / 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text(
+                children: const [
+                  Text(
                     'Dont have an Account?',
                     style: TextStyle(fontSize: 15),
                   ),
-                  GestureDetector(
+                  /*    GestureDetector(
                     onTap: () {
                       Navigator.of(context).push(
                           CupertinoPageRoute(builder: (_) => RegisterPage()));
@@ -100,7 +98,7 @@ class _LoginPageState extends State<LoginPage> {
                         color: Theme.of(context).accentColor,
                       ),
                     ),
-                  )
+                )*/
                 ],
               )
             ],
