@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "790407503285",
+    "project_id": "tradeoff-6eaae",
+    "storage_bucket": "tradeoff-6eaae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790407503285:android:dd5b97a0cdf1e9f7314dfc",
+        "android_client_info": {
+          "package_name": "com.example.tradeofffinal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "790407503285-54de8rmcvtte35j9tvc9so0adlrqte4b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAu8h_ANB5LAuyR2PjkBS0-d8_WA0mexe0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "790407503285-54de8rmcvtte35j9tvc9so0adlrqte4b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
